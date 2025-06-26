@@ -7,19 +7,6 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  subscription_id = "eed4b87f-0012-48f8-8ba6-d6183ef0f528"
-  client_id       = "518ace1f-b788-42ca-9827-4c3570b912d7"
-  client_secret   = "BQU8Q~SGY2Tuuk.OA6QyksH0~CMXF6T60gdA8aWo"
-  tenant_id       = "cc5b55bb-0e45-4815-a2d1-bb38289c4075"
-  features {
-    resource_group {
-      prevent_deletion_if_contains_resources = false
-    }
-
-  }
-}
-
 resource "azurerm_resource_group" "ABCO" {
   name     = "myrg87"
   location = "Central India"
