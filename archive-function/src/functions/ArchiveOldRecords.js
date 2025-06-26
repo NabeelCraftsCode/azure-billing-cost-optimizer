@@ -10,7 +10,7 @@ const BLOB_CONNECTION = process.env.BLOB_CONNECTION;
 const CONTAINER_NAME = "archived-records";
 
 app.timer('ArchiveOldRecords', {
-    schedule: '0 */2 * * * *', // runs every 2 minutes
+    schedule: '0 0 0 * * *', // runs every 2 minutes
     handler: async (myTimer, context) => {
         const timeStamp = new Date().toISOString();
         context.log('Timer function ran at:', timeStamp);
